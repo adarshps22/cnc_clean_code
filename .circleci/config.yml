@@ -39,3 +39,6 @@ jobs:
       - run:
           name: Cyclomatic Complexity Check
           command: 'lizard --CCN 3'
+      - run:
+          name: Unit test
+          command: './cnc_test'
