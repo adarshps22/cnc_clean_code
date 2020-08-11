@@ -1,3 +1,5 @@
+#include <string>
+
 class Cnc_health_idicator
 {
 	bool _is_temp_within_limits;
@@ -38,8 +40,8 @@ public:
 		if (!_is_temp_within_limits)
 			_environment_attention = true;
 
-		if (!_is_part_variation_within_limits || !_is_continuous_operation_within_limits || !_is_startup_successful)
-			_cnc_attentiion = true;
+		/*if (!_is_part_variation_within_limits || !_is_continuous_operation_within_limits || !_is_startup_successful)
+			_cnc_attentiion = true;*/
 	}
 
 	void update_log(std::string log_message)
