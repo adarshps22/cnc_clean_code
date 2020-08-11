@@ -19,8 +19,3 @@ public:
 		diagnosis.update_all_status();
 	}
 };
-
-int main()
-{
-	return 0;
-}
