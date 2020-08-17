@@ -1,5 +1,7 @@
+#pragma once
+
 #include "Cnc_alerating.h"
-#include <Map>
+#include <map>
 
 enum class Monitor_indicator{
 	TEMP_INDICATOR,
