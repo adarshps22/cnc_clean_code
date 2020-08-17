@@ -1,5 +1,7 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required (VERSION 3.7)
 
-set(CMAKE_CXX_STANDARD 11)
+project(CNC_MACHINE)
 
-project(cnc_clean_code)
+include_directories(interface)
+include_directories(include)
+include_directories(include/monitor-indicators)

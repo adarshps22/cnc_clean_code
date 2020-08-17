@@ -1,11 +1,12 @@
 #include <map>
 #include <string>
+#include <inttypes.h>
 
-class Cnc_error_message
+class Cnc_startup_error_codes
 {
 private:
 
-	std::map<unsigned int, std::string> _error_codes;
+	std::map<uint64_t, std::string> _error_codes;
 
 public:
 
@@ -17,7 +18,7 @@ public:
 		DATA_CORRUPT = 0x02	
 	};
 
-	Cnc_error_message()
+	Cnc_startup_error_codes()
 	{
 		_error_codes.emplace((unsigned int)error_code::ALL_OK, "All OK");
 		_error_codes.emplace((unsigned int)error_code::NO_DATA, "No Data to Controller");
@@ -25,7 +26,7 @@ public:
 		_error_codes.emplace((unsigned int)error_code::DATA_CORRUPT, "Configuration data in the mahcine is corupted");
 	}
 
-	std::string get_error_message(unsigned int error_code)
+	std::string get_error_message(uint64_t error_code)
 	{
 		auto error = _error_codes.find(error_code);
 		if (error != _error_codes.end())
